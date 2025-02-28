@@ -1,62 +1,36 @@
-import React, { useState } from "react";
+import React from "react";
 import "tailwindcss/tailwind.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <nav className="bg-black p-6 shadow-md fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-white text-xl font-bold">
-          <img
-            src="/raj/public/assets/images/logo.png"
-            alt="Logo"
-            className="h-8"
-          />
+          <Link href="/">
+            <img
+              src="/raj/public/assets/images/logo.png"
+              alt="Logo"
+              className="h-8 cursor-pointer"
+            />
+          </Link>
         </div>
 
         {/* Navigation Menu */}
         <ul className="flex space-x-8 text-white text-lg font-semibold">
           <li className="hover:text-gray-300 cursor-pointer transition duration-300">
-            About
+            <Link href="/autocad-training">AutoCAD Training</Link>
           </li>
           <li className="hover:text-gray-300 cursor-pointer transition duration-300">
-            Services
+            <Link href="/revit-training">Revit Training</Link>
           </li>
-
-          {/* Dropdown Menu */}
-          <li className="relative">
-            <button
-              onMouseEnter={toggleDropdown}
-              onMouseLeave={toggleDropdown}
-              className="flex items-center text-white hover:text-gray-300 transition duration-300 focus:outline-none"
-            >
-              More <i className="fas fa-chevron-down ml-2 text-white"></i>
-            </button>
-
-            {isOpen && (
-              <ul
-                onMouseEnter={() => setIsOpen(true)}
-                onMouseLeave={() => setIsOpen(false)}
-                className="absolute right-0 mt-2 w-48 bg-gray-800 text-white rounded-md shadow-lg py-2 z-50"
-              >
-                <li className="px-4 py-2 hover:bg-gray-700 transition duration-300 cursor-pointer">
-                  Contact
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-700 transition duration-300 cursor-pointer">
-                  Blog
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-700 transition duration-300 cursor-pointer">
-                  Careers
-                </li>
-              </ul>
-            )}
+          <li className="hover:text-gray-300 cursor-pointer transition duration-300">
+            <Link href="/sap-training">SAP Training</Link>
+          </li>
+          <li className="hover:text-gray-300 cursor-pointer transition duration-300">
+            <Link href="/etabs-training">ETABS Training</Link>
           </li>
         </ul>
       </div>
