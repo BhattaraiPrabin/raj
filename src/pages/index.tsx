@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "@/components/common/navbar";
 import Slider from "@/components/common/slider";
 import AboutSection from "@/components/common/about";
-import ServicesTabs from "@/components/common/service-tab";
+// import ServicesTabs from "@/components/common/service-tab";
 import PortfolioProjects from "@/components/common/portfolio";
 import TrainingProgramsSection from "@/components/common/training";
 import ProcessSection from "@/components/common/process";
@@ -23,12 +23,13 @@ const HomePage = () => {
           principles to craft solutions that stand out.
         </p>
         <AboutSection />
-        <ServicesTabs />
+        <TrainingProgramsSection />
+   
         <PortfolioProjects />
         {/* <TestimonialsSection /> */}
       </div>
       <ProcessSection />
-      <TrainingProgramsSection />
+
       <ContactSection />
       <Footer />
     </div>

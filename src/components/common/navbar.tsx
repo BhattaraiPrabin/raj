@@ -24,16 +24,16 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation Menu */}
         <ul className="hidden md:flex space-x-8 text-white text-lg font-semibold">
           <li className="hover:text-gray-300 cursor-pointer transition duration-300">
-            <Link href="/autocad-training">AutoCAD Training</Link>
+            <Link href="/courses/autocad-training">AutoCAD Training</Link>
           </li>
           <li className="hover:text-gray-300 cursor-pointer transition duration-300">
-            <Link href="/revit-training">Revit Training</Link>
+            <Link href="/courses/revit-training">Revit Training</Link>
           </li>
           <li className="hover:text-gray-300 cursor-pointer transition duration-300">
-            <Link href="/sap-training">SAP Training</Link>
+            <Link href="/courses/sap-training">SAP Training</Link>
           </li>
           <li className="hover:text-gray-300 cursor-pointer transition duration-300">
-            <Link href="/etabs-training">ETABS Training</Link>
+            <Link href="/courses/etabs-training">ETABS Training</Link>
           </li>
         </ul>
 
