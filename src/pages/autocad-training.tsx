@@ -216,17 +216,19 @@ const CourseLandingPage = () => {
     <div className="text-white">
       <Navbar />
       {/* Banner Section */}
-      <header className="mt-20 relative h-[40vh] flex items-center justify-center text-white overflow-hidden">
+      <header className="mt-20 relative min-h-[50vh] sm:h-[40vh] flex items-center justify-center text-white overflow-hidden px-4">
         <div className="relative z-20 text-center">
-          <h1 className="text-5xl font-bold mb-4">AutoCAD Training in Nepal</h1>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-4">
+            AutoCAD Training in Nepal
+          </h1>
+          <p className="text-lg sm:text-xl mb-6 max-w-xl mx-auto">
             Master AutoCAD Skills with Expert Training. Learn 2D and 3D Design,
             Drafting, and Modeling for Architecture, Engineering, and
             Construction.
           </p>
           <motion.button
             whileHover={{ scale: 1.1 }}
-            className="px-8 py-3 bg-red-600 text-white font-bold rounded-full shadow-lg hover:bg-red-700 transition-all"
+            className="px-6 py-3 bg-red-600 text-white font-bold rounded-full shadow-lg hover:bg-red-700 transition-all"
           >
             Enroll Now
           </motion.button>
